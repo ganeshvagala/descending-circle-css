@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    height: 100%;
+}
+body{
+    background: #fbd7d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-loader{
+    width: 100px;
+    height: 100px;
+    color: #0458d6;
+    border-radius: 50%;
+    background: conic-gradient(
+        from -45deg at top 50px left 50%,
+        #0000,
+        currentColor 90deg 90deg,
+        #0000 91deg
+    ),
+    conic-gradient(
+        from 45deg at right 50px top 50%,
+        #0000,
+        currentColor 90deg 90deg,
+        #0000 91deg
+    ),
+    conic-gradient(
+        from 135deg at bottom 50px left 50%,
+        #0000,
+        currentColor 90deg 90deg,
+        #0000 91deg
+    ),
+    conic-gradient(
+        from -135deg at left 50px top 50%,
+        #0000,
+        currentColor 90deg 90deg,
+        #0000 91deg
+    );
+    animation: ganee 2s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes ganee {
+    50%{
+        width: 140px;
+        height: 140px;
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
